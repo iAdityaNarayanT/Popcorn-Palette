@@ -62,8 +62,20 @@ export default function App() {
         <Numresults movies={movies} />
       </NavBar>
       <Main>
+        {/* not recommended to do: */}
+        {/* <Box element={<MovieList movies={movies} />} /> */}
+
+        {/* passing components explicitly as a prop */}
+        {/* <Box
+          element={
+            <>
+              <WatchedSummary watched={watched} />
+              <WatchedMovieList watched={watched} />
+            </>
+          }
+        /> */}
+        {/* passing components implicitly children prop */}
         <Box>
-          {" "}
           <MovieList movies={movies} />
         </Box>
         <Box>
